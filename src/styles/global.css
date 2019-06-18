@@ -1,3 +1,7 @@
+a {
+  text-decoration: none !important;
+}
+
 .static-page-content .wrapper {
   color: #5e606a;
 }

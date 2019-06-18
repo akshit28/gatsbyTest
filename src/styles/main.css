@@ -9,37 +9,9 @@ body {
   font-size: 12px;
   color: #121312;
 }
-
-
 .h1,.h2,.h3,h1,h2,h3{
     margin-top:0;
     margin-bottom:0
-}
-.tooltip.bottom{
-    padding:9px;
-    margin-top:0
-}
-.tooltip.bottom.tooltip-arrow{
-    display:none
-}
-.tooltip.in{
-    opacity:1
-}
-.tooltip-inner{
-    color:inherit;
-    text-align:left;
-    padding:0;
-    background-color:inherit
-}
- label{
-    display:inline
-}
-.carousel-indicators{
-    left:0;
-    margin-left:0
-}
-.text-white{
-    color:#fff
 }
  page-header{
     display:block;
@@ -574,56 +546,6 @@ body {
 }
 .wrapper.page-text h1,.wrapper.page-text h2{
     color:#8f0000
-}
-.floatright{
-    float:right;
-    padding:0 0 15px 15px
-}
-.floatleft.rwtext{
-    line-height:28px;
-    margin-top:-4px
-}
-.clearit{
-    clear:both
-}
-#nano_box {
-  width: 710px;
-  margin: 0 auto;
-}
-
-.nanoTxtArea {
-  width: 319px;
-  float: right;
-  margin: 67px 25px 0 0;
-}
-
-.nanoTxtArea h1 {
-  margin: 0 0 17px;
-  padding: 0;
-  font-size: 32px;
-  font-weight: 700;
-  color: #fff;
-}
-
-.nanoSubTxt {
-  font-size: 14px;
-  color: #cdcdcd;
-  line-height: 19px;
-  padding: 0 0 12px;
-}
-
-.nanoTxtArea .register_btn a {
-  width: 169px;
-  height: 45px;
-  float: left;
-  margin: 0;
-  border: 0;
-  cursor: pointer;
-  position: absolute;
-}
-
-.nanoTxtArea .register_btn a:hover {
-  background-position: 0 -45px;
 }
 
 #description_content {
