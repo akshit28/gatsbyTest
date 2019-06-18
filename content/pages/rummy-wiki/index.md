@@ -7,7 +7,7 @@ date: "2019-05-01T22:12:03.284Z"
 
 <div class="static-banner-hlder" style="background:#450e07 !important;">
 
-![Rummy wiki](./Rummy-Wiki.jpg)
+![Rummy wiki](./assets/Rummy-Wiki.jpg)
 
 </div>
 <div class="breadcrumb-bar">

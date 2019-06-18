@@ -489,30 +489,32 @@ export default () => (
                 {" "}
                 <Link
                   to={data.allSidebarItemsJson.edges[0].node.link}
-                  className="menu_header selected"
+                  className="menu_header"
+                  partiallyActive={true}
+                  activeClassName="active"
                 >
-                  <a class="" id="rummy-wiki">
-                    <span class="white-arrow" />
-                    <span class="black-arrow" />{" "}
-                    {data.allSidebarItemsJson.edges[0].node.label}
-                    <span class="top-arrow" />
-                  </a>
+                  <span class="white-arrow" />
+                  <span class="black-arrow" />{" "}
+                  {data.allSidebarItemsJson.edges[0].node.label}
+                  <span class="top-arrow" />
                 </Link>
                 <ul class="sub-menu open">
                   <li>
-                    <Link to={data.allSidebarItemsJson.edges[1].node.link}>
-                      <a id="rummy-wiki/online-vs-offline-rummy">
-                        <span class="round-arrow" />{" "}
-                        {data.allSidebarItemsJson.edges[1].node.label}
-                      </a>
+                    <Link
+                      to={data.allSidebarItemsJson.edges[1].node.link}
+                      activeClassName="selected"
+                    >
+                      <span class="round-arrow" />{" "}
+                      {data.allSidebarItemsJson.edges[1].node.label}
                     </Link>
                   </li>
                   <li>
-                    <Link to={data.allSidebarItemsJson.edges[2].node.link}>
-                      <a id="rummy-wiki/history-of-rummy">
-                        <span class="round-arrow" />{" "}
-                        {data.allSidebarItemsJson.edges[2].node.label}
-                      </a>
+                    <Link
+                      to={data.allSidebarItemsJson.edges[2].node.link}
+                      activeClassName="selected"
+                    >
+                      <span class="round-arrow" />{" "}
+                      {data.allSidebarItemsJson.edges[2].node.label}
                     </Link>
                   </li>
                 </ul>
