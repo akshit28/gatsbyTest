@@ -4,7 +4,7 @@ export default () => (
   <page-header class="fixed-header">
     <div class="container">
       <div class="page-header-wrapper">
-        <a href="https://www.jungleerummy.com/">
+        <a aria-label="old logo" href="https://www.jungleerummy.com/">
           <div class="hp-old-logo" />
         </a>
 
@@ -23,6 +23,7 @@ export default () => (
                 maxlength=""
                 placeholder="Username/Email"
                 value=""
+                aria-label="username"
               />
             </div>
             <div>
@@ -31,6 +32,7 @@ export default () => (
                 maxlength="14"
                 placeholder="Password"
                 type="password"
+                aria-label="password"
               />
               <div class="forgot-link-label pointer">Forgot Password?</div>
             </div>

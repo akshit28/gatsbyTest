@@ -7,7 +7,7 @@ date: "2015-05-06T23:46:37.121Z"
 
 <div class="static-banner-hlder" style="background:#450e07 !important;">
 
-![Online Rummy Vs Offline Rummy](./Online-Rummy-Vs-Offline-Rummy-1.jpg)
+![Online Rummy Vs Offline Rummy](./assets/Online-Rummy-Vs-Offline-Rummy-1.jpg)
 
 </div>
 
