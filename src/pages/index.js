@@ -1,12 +1,10 @@
-import React, { useState } from "react"
-import { Link, graphql } from "gatsby"
+import React from "react"
+import { graphql } from "gatsby"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
 const JWRIndex = props => {
-  const [loggedIn, setLoggedIn] = useState(false)
-
   const { data } = props
   const siteTitle = data.site.siteMetadata.title
   const pages = data.allMarkdownRemark.edges

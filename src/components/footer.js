@@ -10,14 +10,29 @@ export default () => (
             <div class="follow-us-txt footer-link-head">FOLLOW US ON</div>
             <div class="follow-us footer-col-content">
               <div class="social-links-container">
-                <a href="https://www.facebook.com/JungleeRummy" target="_blank">
-                  <div id="fb-img" />
+                <a
+                  rel="noreferrer"
+                  aria-label="fb"
+                  href="https://www.facebook.com/JungleeRummy"
+                  target="_blank"
+                >
+                  <div class="fb-img" />
                 </a>
-                <a href="https://twitter.com/Jungleerummy" target="_blank">
-                  <div id="tweeter-img" />
+                <a
+                  rel="noreferrer"
+                  aria-label="Twitter"
+                  href="https://twitter.com/Jungleerummy"
+                  target="_blank"
+                >
+                  <div class="tweeter-img" />
                 </a>
-                <a href="https://www.jungleerummy.com/blog" target="_blank">
-                  <div id="insta-img" />
+                <a
+                  rel="noreferrer"
+                  aria-label="blog"
+                  href="https://www.jungleerummy.com/blog"
+                  target="_blank"
+                >
+                  <div class="insta-img" />
                 </a>
               </div>
             </div>
@@ -31,6 +46,8 @@ export default () => (
                 <div class="security-img security-img4" />
                 <div class="security-img security-img5" />
                 <a
+                  rel="noreferrer"
+                  aria-label="security"
                   class="security-img security-img7"
                   href="http://trf.org.in/"
                   target="_blank"
@@ -75,6 +92,7 @@ export default () => (
                     </div>
                     <div>
                       <a
+                        rel="noreferrer"
                         href="https://www.jungleerummy.com/blog/"
                         id="gtm-footer-blog"
                         target="_blank"
@@ -84,6 +102,7 @@ export default () => (
                     </div>
                     <div>
                       <a
+                        rel="noreferrer"
                         href="https://www.jungleerummy.com/responsiblegaming/"
                         id="gtm-footer-responsible-gaming"
                         target="_blank"
@@ -108,6 +127,7 @@ export default () => (
                     </div>
                     <div>
                       <a
+                        rel="noreferrer"
                         href="https://www.jungleerummy.com/mobile-rummy"
                         id="gtm-footer-mobile-rummy"
                         target="_blank"
@@ -129,6 +149,7 @@ export default () => (
                     </div>
                     <div>
                       <a
+                        rel="noreferrer"
                         href="https://www.jungleerummy.com/disclaimer/"
                         id="gtm-footer-disclaimer"
                         target="_blank"
@@ -147,20 +168,37 @@ export default () => (
             <div class="follow-us-txt footer-link-head">FOLLOW US ON</div>
             <div class="follow-us footer-col-content">
               <div class="social-links-container">
-                <a href="https://www.facebook.com/JungleeRummy" target="_blank">
-                  <div id="fb-img" />
-                </a>
-                <a href="https://twitter.com/Jungleerummy" target="_blank">
-                  <div id="tweeter-img" />
+                <a
+                  rel="noreferrer"
+                  aria-label="fb"
+                  href="https://www.facebook.com/JungleeRummy"
+                  target="_blank"
+                >
+                  <div class="fb-img" />
                 </a>
                 <a
+                  rel="noreferrer"
+                  aria-label="Twitter"
+                  href="https://twitter.com/Jungleerummy"
+                  target="_blank"
+                >
+                  <div class="tweeter-img" />
+                </a>
+                <a
+                  rel="noreferrer"
+                  aria-label="gplus"
                   href="https://plus.google.com/u/0/+Jungleerummy/posts"
                   target="_blank"
                 >
                   <div id="gplus-img" />
                 </a>
-                <a href="https://www.jungleerummy.com/blog" target="_blank">
-                  <div id="insta-img" />
+                <a
+                  rel="noreferrer"
+                  aria-label="blog"
+                  href="https://www.jungleerummy.com/blog"
+                  target="_blank"
+                >
+                  <div class="insta-img" />
                 </a>
               </div>
             </div>
@@ -176,6 +214,8 @@ export default () => (
                 <div class="security-img security-img5" />
                 <div class="security-img security-img6" />
                 <a
+                  rel="noreferrer"
+                  aria-label="security"
                   class="security-img security-img7"
                   href="http://trf.org.in/"
                   target="_blank"

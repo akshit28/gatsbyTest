@@ -11,11 +11,7 @@ class Layout extends React.Component {
     let maincontain
 
     if (isIndex === "true") {
-      maincontain = (
-        // <static-page>
-        <Home />
-        // </static-page>
-      )
+      maincontain = <Home />
     } else {
       maincontain = (
         <static-page>

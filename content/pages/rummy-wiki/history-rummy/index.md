@@ -8,7 +8,7 @@ description: this conatain description
 
 <div class="static-banner-hlder" style="background:#450e07 !important;">
 
-![History of rummy](./History-of-Rummy.jpg)
+![History of rummy](./assets/History-of-Rummy.jpg)
 
 </div>
 
