@@ -1,8 +1,8 @@
 import React from "react"
-import { Link } from "gatsby"
 import Footer from "./footer"
 import Header from "./header"
 import SubMenu from "./sub-menu"
+import Home from "./home"
 
 class Layout extends React.Component {
   render() {
@@ -12,17 +12,9 @@ class Layout extends React.Component {
 
     if (isIndex === "true") {
       maincontain = (
-        <static-page>
-          <div class="new-design1">
-            <div class="static-page-container clearfix">
-              <SubMenu />
-              <div class="static-page-content">
-                <div id="newDesign" />
-                {children}
-              </div>
-            </div>
-          </div>
-        </static-page>
+        // <static-page>
+        <Home />
+        // </static-page>
       )
     } else {
       maincontain = (

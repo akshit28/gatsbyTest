@@ -3,7 +3,7 @@ import { Link, graphql } from "gatsby"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import { rhythm, scale } from "../utils/typography"
+// import { rhythm, scale } from "../utils/typography"
 
 class PageTemplate extends React.Component {
   render() {
@@ -16,7 +16,7 @@ class PageTemplate extends React.Component {
           title={page.frontmatter.title}
           description={page.frontmatter.description || page.excerpt}
         />
-        <div dangerouslySetInnerHTML={{ __html: page.html }} />
+        <div dangerouslySetInnerHTML={{ __html: page.html }} id="test" />
       </Layout>
     )
   }

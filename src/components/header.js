@@ -1,59 +1,85 @@
-import React from "react"
+import React, { Component } from "react"
+import Login from "./login"
+import Navbar from "./navbar"
+import mrEmitter from "../emmiter/emmiter"
 
-export default () => (
-  <page-header class="fixed-header">
-    <div class="container">
-      <div class="page-header-wrapper">
-        <a href="https://www.jungleerummy.com/">
-          <div class="hp-old-logo" />
-        </a>
+let Subscription = null
+class Header extends Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      isLoggedIn: false,
+      toggleMenu: false,
+    }
+    this.authSuccess = this.authSuccess.bind(this)
+    this.toggleMenu = this.toggleMenu.bind(this)
+  }
 
-        <nav>
-          <div class="prize-won">
-            <i class="header-prize-icon" />
-            <span>Trusted By</span>
-            <span>5 Million+ Players</span>
+  componentWillMount() {
+    //   // Register and listen for our custom events that will be emitted by children.
+    Subscription = mrEmitter.addListener("loginFailed", data => {
+      console.log("EVENT_DATA", data)
+    })
+
+    Subscription = mrEmitter.addListener("loginSuccess", data => {
+      console.log("EVENT_DATA", data)
+      this.authSuccess(data)
+    })
+  }
+
+  authSuccess(data) {
+    this.setState({ isLoggedIn: true })
+    console.log("authsuccess called", this.state.isLoggedIn)
+  }
+
+  toggleMenu() {
+    if (this.state.toggleMenu == false) {
+      this.setState({ toggleMenu: true })
+      mrEmitter.emit("showMenu", true)
+    } else {
+      this.setState({ toggleMenu: false })
+      mrEmitter.emit("showMenu", false)
+    }
+  }
+
+  render() {
+    return (
+      <page-header className="fixed-header">
+        <div className="container">
+          <div className="page-header-wrapper">
+            <span
+              className={`side-menu ${
+                this.state.toggleMenu == true ? "open" : ""
+              }`}
+              id="sideMenu"
+              onClick={this.toggleMenu}
+            ></span>
+            <a href="https://www.jungleerummy.com/">
+              <div className="hp-old-logo" />
+            </a>
+            {!this.state.isLoggedIn ? (
+              <nav>
+                <div className="prize-won">
+                  <i className="header-prize-icon" />
+                  <span>Trusted By</span>
+                  <span>5 Million+ Players</span>
+                </div>
+              </nav>
+            ) : null}
+
+            {this.state.isLoggedIn ? <Navbar /> : <Login />}
+            <div className="isMobile goToLogin">
+              <a className="text-white">Login</a>
+            </div>
           </div>
-        </nav>
-        <login class="isDesktop">
-          <div class="login-container">
-            <div>
-              <input
-                id="username"
-                maxlength=""
-                placeholder="Username/Email"
-                value=""
-              />
-            </div>
-            <div>
-              <input
-                id="password"
-                maxlength="14"
-                placeholder="Password"
-                type="password"
-              />
-              <div class="forgot-link-label pointer">Forgot Password?</div>
-            </div>
-            <div class="login-btn-header">
-              <button>Login</button>
-            </div>
-            <div class="word">OR</div>
-            <div>
-              <div class="fb-header-container">
-                <facebook>
-                  <div class="social-btn-hdlr">
-                    <div class="fb-login-header" />
-                    <div class="gb-login-header" />
-                  </div>
-                </facebook>
-              </div>
-            </div>
-          </div>
-        </login>
-        <div class="isMobile goToLogin">
-          <a class="text-white">Login</a>
         </div>
-      </div>
-    </div>
-  </page-header>
-)
+        <div
+          className={`side-mask ${this.state.toggleMenu == true ? "show" : ""}`}
+          onClick={this.toggleMenu}
+        ></div>
+      </page-header>
+    )
+  }
+}
+
+export default Header

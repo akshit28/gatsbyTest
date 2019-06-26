@@ -1,5 +1,8 @@
 import React from "react"
 import { Link, StaticQuery, graphql } from "gatsby"
+import mrEmitter from "../emmiter/emmiter"
+
+let Subscription = null
 
 export default () => (
   <StaticQuery
@@ -15,9 +18,33 @@ export default () => (
         }
       }
     `}
-    render={data => (
+    render={data => <Submenu menuData={data}></Submenu>}
+  />
+)
+
+class Submenu extends React.Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      isMenuvisible: false,
+    }
+  }
+  componentWillMount() {
+    Subscription = mrEmitter.addListener("showMenu", data => {
+      this.toggleMenu(data)
+    })
+  }
+  toggleMenu(data) {
+    this.setState({ isMenuvisible: data })
+  }
+  render() {
+    return (
       <side-menu>
-        <div class="side-menu-wrapper">
+        <div
+          className={`side-menu-wrapper ${
+            this.state.isMenuvisible == true ? "expand" : ""
+          }`}
+        >
           <a
             routerlink="/client/lobby"
             href="https://www.jungleerummy.com/client/lobby"
@@ -488,31 +515,47 @@ export default () => (
               <li>
                 {" "}
                 <Link
-                  to={data.allSidebarItemsJson.edges[0].node.link}
-                  className="menu_header selected"
+                  to={
+                    this.props.menuData.allSidebarItemsJson.edges[0].node.link
+                  }
+                  className="menu_header"
+                  partiallyActive={true}
+                  activeClassName="active"
                 >
-                  <a class="" id="rummy-wiki">
-                    <span class="white-arrow" />
-                    <span class="black-arrow" />{" "}
-                    {data.allSidebarItemsJson.edges[0].node.label}
-                    <span class="top-arrow" />
-                  </a>
+                  <span class="white-arrow" />
+                  <span class="black-arrow" />{" "}
+                  {this.props.menuData.allSidebarItemsJson.edges[0].node.label}
+                  <span class="top-arrow" />
                 </Link>
                 <ul class="sub-menu open">
                   <li>
-                    <Link to={data.allSidebarItemsJson.edges[1].node.link}>
-                      <a id="rummy-wiki/online-vs-offline-rummy">
-                        <span class="round-arrow" />{" "}
-                        {data.allSidebarItemsJson.edges[1].node.label}
-                      </a>
+                    <Link
+                      to={
+                        this.props.menuData.allSidebarItemsJson.edges[1].node
+                          .link
+                      }
+                      activeClassName="selected"
+                    >
+                      <span class="round-arrow" />{" "}
+                      {
+                        this.props.menuData.allSidebarItemsJson.edges[1].node
+                          .label
+                      }
                     </Link>
                   </li>
                   <li>
-                    <Link to={data.allSidebarItemsJson.edges[2].node.link}>
-                      <a id="rummy-wiki/history-of-rummy">
-                        <span class="round-arrow" />{" "}
-                        {data.allSidebarItemsJson.edges[2].node.label}
-                      </a>
+                    <Link
+                      to={
+                        this.props.menuData.allSidebarItemsJson.edges[2].node
+                          .link
+                      }
+                      activeClassName="selected"
+                    >
+                      <span class="round-arrow" />{" "}
+                      {
+                        this.props.menuData.allSidebarItemsJson.edges[2].node
+                          .label
+                      }
                     </Link>
                   </li>
                 </ul>
@@ -558,6 +601,6 @@ export default () => (
           </div>
         </div>
       </side-menu>
-    )}
-  />
-)
+    )
+  }
+}

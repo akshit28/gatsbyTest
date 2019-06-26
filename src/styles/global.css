@@ -2,15 +2,9 @@
   color: #5e606a;
 }
 
-.static-page-content h1 {
-  padding: 20px 0 20px 0px !important;
-  font-size: 22px !important;
-  font-weight: bold !important;
-}
-
-.static-page-content {
+/* .static-page-content {
   line-height: 20px !important;
-}
+} */
 
 .tabcontent ul li {
   list-style: none;

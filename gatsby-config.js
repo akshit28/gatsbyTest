@@ -4,7 +4,7 @@ module.exports = {
     title: `JR static page`,
     author: `JG`,
     description: `jwr.`,
-    siteUrl: `https://www.google.com/`,
+    siteUrl: `https://www.jungleerummy.com/`,
     social: {
       twitter: `sanjeevandindia`,
     },
@@ -59,22 +59,22 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `JWR static pages`,
-        short_name: `JWR`,
+        name: `Junglee Rummy Blog`,
+        short_name: `JungleeRummy`,
         start_url: `/`,
         background_color: `#ffffff`,
         theme_color: `#663399`,
-        display: `minimal-ui`,
-        icon: `content/assets/gatsby-icon.png`,
+        display: `standalone`,
+        icon: `content/assets/favicon.png`,
       },
     },
-    `gatsby-plugin-offline`,
-    `gatsby-plugin-react-helmet`,
-    {
-      resolve: `gatsby-plugin-typography`,
-      options: {
-        pathToConfigModule: `src/utils/typography`,
-      },
-    },
+    // `gatsby-plugin-offline`,
+    // `gatsby-plugin-react-helmet`,
+    // {
+    //   resolve: `gatsby-plugin-typography`,
+    //   options: {
+    //     pathToConfigModule: `src/utils/typography`,
+    //   },
+    // },
   ],
 }
